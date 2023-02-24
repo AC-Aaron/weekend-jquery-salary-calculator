@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="jquery.js"></script>
     <script src="myscript.js"></script>
+    <link rel="stylesheet" href="myStyleSheet.css">
     <title>My Salary Calculator</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
         <input type="text" placeholder="last name" class="input-field" id="lastNameInput">
         <input type="number" placeholder="ID" class="input-field" id="idNumberInput">
         <input type="text" placeholder="Title" class="input-field" id="titleInput">
-        <input type="text" placeholder="Annual Salary" class="input-field" id="annualSalaryInput"> <br>
+        <input type="number" placeholder="Annual Salary" class="input-field" id="annualSalaryInput"> <br>
         
         <p>
             <button class="button" id="infoSubmitButton">Submit</button>
@@ -29,10 +30,19 @@
     </div>
     <div>
         <!--"EMPLOYEES HEADER"-->
-        <h2>Employees</h2>
+        <h2>Employees</h2> <br>
+        <table>
+            <tr>
+               <th>First Name</th> 
+               <th>Last Name</th> 
+               <th>ID</th> 
+               <th>Title</th> 
+               <th>Annual Salary</th> 
+            </tr>
+        </table>
 
         <!--Table containing info pulled from input fields-->
-        
+
         <!--Each of the above rows of information require a "delete" button-->
 
     </div>
