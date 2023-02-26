@@ -64,8 +64,12 @@ function monthlyCostTracker(){
         
         
     }   //end for loop
-    let totalSalariesMonthly = (totalSalaries/12)   //new var for salaries combined then divided by 12
+    let totalSalariesMonthly = (totalSalaries/12)   //new var for sum of salaries then divided by 12
     console.log('total cost per month is', totalSalariesMonthly)
+
+    let el = $('#totalMonthlyDisplay'); //target html element
+    el.empty();                         //empty out 
+    el.append(totalSalariesMonthly);    //update totalmonthly cost to DOM
 
     //add the salaries up then divide by 12 "employeesalaries/12= totalMonthly"
 }
@@ -77,5 +81,12 @@ fields. Using the stored information, calculate monthly costs and append this
  to the to DOM. If the total monthly cost exceeds $20,000, add a red 
  background color to the total monthly cost.
  Need
+
+ To Do:
+-next step is to add the appending employeeFormInputs to the DOM
+-add a delete button to the right of the displayed employeeFormInputs on DOM
+-relocate the total monthly display to bottom right of the page
+
+
 */
 

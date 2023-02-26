@@ -2,3 +2,11 @@ table, th {
     border: 1px solid black;
     border-collapse: collapse;
 }
+
+#monthlyTotal {
+    text-align: right;
+    position: absolute;
+    bottom: 10px;
+    width: 50%;
+   
+}
