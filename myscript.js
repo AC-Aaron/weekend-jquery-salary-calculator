@@ -72,6 +72,12 @@ function monthlyCostTracker(){
     el.append(totalSalariesMonthly);    //update totalmonthly cost to DOM
         //add the salaries up then divide by 12 "employeesalaries/12= totalMonthly"
         
+        //If the total monthly cost exceeds $20,000, add a red 
+        // background color to the total monthly cost.
+        if(totalSalariesMonthly > 20000){
+            $('#totalMonthlyDisplay').css('background-color', 'red');
+        }
+
        displayEmployeeInfo();   //call in next function to display employee info in DOM
 }
 
@@ -103,10 +109,10 @@ fields. Using the stored information, calculate monthly costs and append this
 
  To Do:
 -next step is to add the appending employeeFormInputs to the DOM ✅
--add a row to the employees table containing the inputed employee information
+-add a row to the employees table containing the inputed employee information✅
 -add a delete button to the right of the displayed employeeFormInputs on DOM
 -relocate the total monthly display to bottom right of the page
-
+-If the total monthly > $20,000, add a red background color to the total monthly cost.✅
 
 */
 

@@ -16,12 +16,12 @@
     <div>
         <h2>Add Employee</h2><!--Add Employee Header-->
         <!--Add 5 input fields-->
-        <input type="text" placeholder="first name" class="input-field" id="firstNameInput">
+        <input type="text" placeholder="first name" class="input-field" id="firstNameInput">    
         <input type="text" placeholder="last name" class="input-field" id="lastNameInput">
         <input type="number" placeholder="ID" class="input-field" id="idNumberInput">
         <input type="text" placeholder="Title" class="input-field" id="titleInput">
         <input type="number" placeholder="Annual Salary" class="input-field" id="annualSalaryInput"> <br>
-        
+        <!--the above fields are 153 x 21-->
         <p>
             <button class="button" id="infoSubmitButton">Submit</button>
         </p>
@@ -31,13 +31,14 @@
     <div>
         <!--"EMPLOYEES HEADER"-->
         <h2>Employees</h2> <br>
-        <table class="Employees-table">
+        <table class="Employees-table" id="employeesTableID">
             <tr>
-               <th>First Name</th> 
-               <th>Last Name</th> 
-               <th>ID</th> 
-               <th>Title</th> 
-               <th>Annual Salary</th> 
+               <th class="employeeTableCell" id="firstNameCell"> First Name </th> 
+               <th class="employeeTableCell" id="lastNameCell"> Last Name </th> 
+               <th class="employeeTableCell" id="IDCell"> ID </th> 
+               <th class="employeeTableCell" id="titleCell"> Title </th> 
+               <th class="employeeTableCell" id="annualSalaryCell"> Annual Salary </th> 
+               <th class="employeeTableCell" id="deleteButtonCell">               </th> 
             </tr>
         </table>
 

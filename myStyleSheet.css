@@ -1,6 +1,7 @@
 table, th {
     border: 1px solid black;
     border-collapse: collapse;
+    size: 153px by 21px;
 }
 
 #monthlyTotal {
@@ -11,6 +12,27 @@ table, th {
    
 }
 .Employees-table {
-    align: center;
     
+}
+.employeeTableCell{
+    
+}
+
+#firstNameCell {
+    width: 160px;
+}
+#lastNameCell{
+    width: 160px;
+}
+#IDCell{
+    width: 80px;
+}
+#titleCell{
+    width: 160px;
+}
+#annualSalaryCell{
+    width: 160px;
+}
+#deleteButtonCell {
+    width: 160px;
 }
