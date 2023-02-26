@@ -5,7 +5,8 @@ $(document).ready(readyNow);
 function readyNow() {
     console.log('DOM is loaded!!');
     $('#infoSubmitButton').on('click', submitEmployeeInfo);
-    
+    //listener for delete button
+    $('#employeesTableID').on('click','deleteButton', onDelete);
 }
 
 //create an array to hold info obtained from field inputs
@@ -54,7 +55,7 @@ console.log('hey, you clicked the submit button!!')
     monthlyCostTracker();
 }   // end submitEmployeeInfo
 
-// To-Do:
+
 function monthlyCostTracker(){
     console.log('in monthlyCostTracker');
     let totalSalaries = 0;
@@ -93,11 +94,27 @@ function displayEmployeeInfo(){
     //loop through employeeFormInputs
 for (let employee of employeeFormInputs ){
     //for each submission create a list item row 
-el.append(`<li>` + employee.firstName + employee.lastName + employee.IDnumber + employee.JobTitle + employee.AnnualSalary + `</li>`);
+el.append(`
+            <tr>
+            <td class="employeeTableCell" id="firstNameCell"> ${employee.firstName} </td> 
+            <td class="employeeTableCell" id="lastNameCell"> ${employee.lastName} </td> 
+            <td class="employeeTableCell" id="IDCell"> ${employee.IDnumber} </td> 
+            <td class="employeeTableCell" id="titleCell"> ${employee.JobTitle} </td> 
+            <td class="employeeTableCell" id="annualSalaryCell"> ${employee.AnnualSalary} </td> 
+            <td>
+                    <button class="deleteButton">Delete</button>
+            </td>
+            </tr>
+        `);
 }   //end for of loop
 
     //for each submission create a list item row 
 }   //end displayEmployeeInfo
+
+function onDelete(){
+    console.log('inside onDelete')
+    
+}
 
 /*
 A 'Submit' button should collect the form information, store the information 
