@@ -52,7 +52,7 @@ console.log('hey, you clicked the submit button!!')
     $('#annualSalaryInput').val('');
 
     monthlyCostTracker();
-}
+}   // end submitEmployeeInfo
 
 // To-Do:
 function monthlyCostTracker(){
@@ -70,9 +70,28 @@ function monthlyCostTracker(){
     let el = $('#totalMonthlyDisplay'); //target html element
     el.empty();                         //empty out 
     el.append(totalSalariesMonthly);    //update totalmonthly cost to DOM
-
-    //add the salaries up then divide by 12 "employeesalaries/12= totalMonthly"
+        //add the salaries up then divide by 12 "employeesalaries/12= totalMonthly"
+        
+       displayEmployeeInfo();   //call in next function to display employee info in DOM
 }
+
+function displayEmployeeInfo(){
+    console.log('in displayEmployeeInfo');
+
+    //target output by ID
+    let el = $('#employeeInfoDisplayOut');
+
+    //empty
+    el.empty();
+
+    //loop through employeeFormInputs
+for (let employee of employeeFormInputs ){
+    //for each submission create a list item row 
+el.append(`<li>` + employee.firstName + employee.lastName + employee.IDnumber + employee.JobTitle + employee.AnnualSalary + `</li>`);
+}   //end for of loop
+
+    //for each submission create a list item row 
+}   //end displayEmployeeInfo
 
 /*
 A 'Submit' button should collect the form information, store the information 
@@ -83,7 +102,8 @@ fields. Using the stored information, calculate monthly costs and append this
  Need
 
  To Do:
--next step is to add the appending employeeFormInputs to the DOM
+-next step is to add the appending employeeFormInputs to the DOM ✅
+-add a row to the employees table containing the inputed employee information
 -add a delete button to the right of the displayed employeeFormInputs on DOM
 -relocate the total monthly display to bottom right of the page
 
