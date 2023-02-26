@@ -34,7 +34,7 @@ console.log('hey, you clicked the submit button!!')
     // -ID number:
     // -job title:
     // -annual salary:
-    let newFormInputs = {
+    let newEmployeeObject = {
         firstName:employeeFirstName,
         lastName:employeeLastName,
         IDnumber:employeeIDnumber,
@@ -42,8 +42,17 @@ console.log('hey, you clicked the submit button!!')
         AnnualSalary:employeeAnnualSalary
     }
     //add new object to the employeeFormInputs array
-    employeeFormInputs.push(newFormInputs);     
+    employeeFormInputs.push(newEmployeeObject);   
+    
+    //empty input fields
+    $('#firstNameInput').val('');
+    $('#lastNameInput').val('');
+    $('#idNumberInput').val('');
+    $('#titleInput').val('');
+    $('#annualSalaryInput').val('');
 }
+
+// To-Do:
 
 /*
 A 'Submit' button should collect the form information, store the information 
