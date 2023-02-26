@@ -50,9 +50,25 @@ console.log('hey, you clicked the submit button!!')
     $('#idNumberInput').val('');
     $('#titleInput').val('');
     $('#annualSalaryInput').val('');
+
+    monthlyCostTracker();
 }
 
 // To-Do:
+function monthlyCostTracker(){
+    console.log('in monthlyCostTracker');
+    let totalSalaries = 0;
+    //obtain values from employees monthly salarys with for loop
+    for(let i = 0; i < employeeFormInputs.length; i++){
+        totalSalaries += Number(employeeFormInputs[i].AnnualSalary)
+        
+        
+    }   //end for loop
+    let totalSalariesMonthly = (totalSalaries/12)   //new var for salaries combined then divided by 12
+    console.log('total cost per month is', totalSalariesMonthly)
+
+    //add the salaries up then divide by 12 "employeesalaries/12= totalMonthly"
+}
 
 /*
 A 'Submit' button should collect the form information, store the information 
@@ -60,5 +76,6 @@ to calculate monthly costs, append information to the DOM and clear the input
 fields. Using the stored information, calculate monthly costs and append this
  to the to DOM. If the total monthly cost exceeds $20,000, add a red 
  background color to the total monthly cost.
+ Need
 */
 
