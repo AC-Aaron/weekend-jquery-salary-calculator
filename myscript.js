@@ -6,7 +6,7 @@ function readyNow() {
     console.log('DOM is loaded!!');
     $('#infoSubmitButton').on('click', submitEmployeeInfo);
     //listener for delete button
-    $('#employeesTableID').on('click','deleteButton', onDelete);
+    $('#employeeInfoDisplayOut').on('click','#deleteButton', onDelete);
 }
 
 //create an array to hold info obtained from field inputs
@@ -102,7 +102,7 @@ el.append(`
             <td class="employeeTableCell" id="titleCell"> ${employee.JobTitle} </td> 
             <td class="employeeTableCell" id="annualSalaryCell"> ${employee.AnnualSalary} </td> 
             <td>
-                    <button class="deleteButton">Delete</button>
+                    <button class="deleter" id="deleteButton">Delete</button>
             </td>
             </tr>
         `);
@@ -112,8 +112,7 @@ el.append(`
 }   //end displayEmployeeInfo
 
 function onDelete(){
-    console.log('inside onDelete')
-    
+    $(this).closest('tr').remove();
 }
 
 /*
